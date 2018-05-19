@@ -119,11 +119,11 @@ public class TestGenericComparator
 
     /**
      * Test for Sorting besy Emp ID Descending...
-     
+     */
 
      public void testSortEmpIDDesc() {
-            ArrayList myData = new ArrayList(); initialize(myData);*/
-            Collections.sort(myData, new GenericComparator("empID", false)); // sort Descending 
+            ArrayList myData = new ArrayList(); initialize(myData);
+            Collections.sort(myData, new GenericComparator("empID", true)); // sort Descending 
             assertEquals("Somebody", ((UnitDTO)myData.get(0)).getEmpName()); 
             
     }
