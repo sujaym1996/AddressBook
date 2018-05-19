@@ -50,7 +50,7 @@ public class TestHexAsciiConversion {
 
 	public void testHextoAsciiNull()
 	{
-		String asciiValueNull=conversion.convertAsciiToHex(null);
+		String asciiValueNull=conversion.convertAsciiToHex();
 		assertNull("Result should be null", asciiValueNull);
 		
 	}
