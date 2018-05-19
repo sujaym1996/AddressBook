@@ -99,7 +99,7 @@ public class TestGenericComparator
      */
     public void testSortEmpNameDesc() {
             ArrayList myData = new ArrayList(); initialize(myData);
-            Collections.sort(myData, new GenericComparator("empName", false)); // sort ascending..
+            Collections.sort(myData, new GenericComparator("empName", true)); // sort ascending..
                assertEquals("Vellman", ((UnitDTO)myData.get(0)).getEmpName()); 
             
     }
@@ -112,7 +112,7 @@ public class TestGenericComparator
     public void testSortEmpIDAsc() {
             ArrayList myData = new ArrayList(); initialize(myData);
 
-            Collections.sort(myData, new GenericComparator("empID", true)); // sort ascending.. 
+            Collections.sort(myData, new GenericComparator("empID", false)); // sort ascending.. 
             assertEquals("Rajan", ((UnitDTO)myData.get(0)).getEmpName()); 
     }
 
@@ -121,7 +121,7 @@ public class TestGenericComparator
      * Test for Sorting besy Emp ID Descending...
      */
 
-     public void testSortEmpIDDesc() {
+    public void testSortEmpIDDesc() {
             ArrayList myData = new ArrayList(); initialize(myData);
             Collections.sort(myData, new GenericComparator("empID", true)); // sort Descending 
             assertEquals("Somebody", ((UnitDTO)myData.get(0)).getEmpName()); 
