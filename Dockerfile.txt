@@ -1,0 +1,7 @@
+FROM java:8
+RUN mkdir -p /usr/src/app1
+WORKDIR /usr/src/app1
+COPY . /usr/src/app1
+RUN ["mvn","package"]
+EXPOSE 8380
+CMD ["usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-war", "target/addressbook.war"]
